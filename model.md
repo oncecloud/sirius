@@ -14,6 +14,11 @@
 
 **优点**：资源公平共享，短任务能够快速响应   
 **缺点**：没有考虑其它目标，比如数据本地性，机器异构性
+
 #### 3. 主占资源调度DRF
+
+#### 4. Delay Scheduling
+
+
 
 ## Flow-based Scheduling(My Work)
