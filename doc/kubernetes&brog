@@ -1,1 +1,7 @@
 # Kubernetes与Brog的区别
+
+
+## 负载类型
+
+- Kubernetes只支持批处理负载，不支持服务负载
+- Brog支持服务负载和批处理负载
