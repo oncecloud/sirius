@@ -1,12 +1,6 @@
-// The Firmament project
-// Copyright (c) 2011-2012 Malte Schwarzkopf <malte.schwarzkopf@cl.cam.ac.uk>
-//
-// Job descriptor protobuf.
+package sirius;
 
-package firmament;
-
-import "base/reference_desc.proto";
-import "base/task_desc.proto";
+import "task_desc.proto";
 
 message JobDescriptor {
   enum JobState {
@@ -25,4 +19,3 @@ message JobDescriptor {
   required TaskDescriptor root_task = 4;
   repeated bytes output_ids = 5;
 }
-
