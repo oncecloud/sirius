@@ -1,9 +1,0 @@
-package sirius;
-
-import "resource_desc.proto";
-
-message ResourceTopologyNodeDescriptor {
-  required ResourceDescriptor resource_desc = 1;
-  repeated ResourceTopologyNodeDescriptor children = 2;
-  optional string parent_id = 3;
-}
