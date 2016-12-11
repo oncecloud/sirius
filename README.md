@@ -1,4 +1,4 @@
-# Ksched: A Firmament Prototype
+# Sirius: A Firmament Prototype, Clusting scheduling using minimum cost maximum flow
 
 [Firmament](http://firmament.io) is a new apporach to cluster scheduling that models the problem of scheduling as a network flow optimization problem.
 Firmament aims on providing:
