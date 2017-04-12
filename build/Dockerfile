@@ -17,7 +17,8 @@ RUN echo "export GOPATH=/root/go-workspace" >> ~/.bashrc
 
 # Install Go and set up workspace for compiling binary
 RUN cd /root && curl -O https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz && tar -xvf go1.6.linux-amd64.tar.gz && mv go /usr/local
-RUN mkdir -p /root/go-workspace/src/github.com/coreos
+#RUN mkdir -p /root/go-workspace/src/github.com/coreos
+#RUN mkdir -p /root/go-workspace/src/github.com/oncecloud
 
 # Set up kubernetes in go workspace
 RUN mkdir /root/go-workspace/src/k8s.io && cd /root/go-workspace/src/github.com/ && git clone https://github.com/kubernetes/kubernetes.git && mv /root/go-workspace/src/github.com/kubernetes /root/go-workspace/src/k8s.io/
