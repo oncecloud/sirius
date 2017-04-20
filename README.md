@@ -71,4 +71,4 @@ You will need to have the same environment set up as is for the sirius image des
 * Generate the proto files by running `proto/genproto.sh` 
 
 
-Fork
+This project is based on [coreos ksched](https://github.com/coreos/ksched)
