@@ -15,8 +15,8 @@
 package flowmanager
 
 import (
-	"github.com/coreos/ksched/scheduling/flow/dimacs"
-	"github.com/coreos/ksched/scheduling/flow/flowgraph"
+	"github.com/oncecloud/sirius/scheduling/flow/dimacs"
+	"github.com/oncecloud/sirius/scheduling/flow/flowgraph"
 )
 
 // The GraphChangeManager bridges GraphManager and Graph. Every

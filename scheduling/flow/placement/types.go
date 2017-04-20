@@ -1,6 +1,6 @@
 package placement
 
-import "github.com/coreos/ksched/scheduling/flow/flowgraph"
+import "github.com/oncecloud/sirius/scheduling/flow/flowgraph"
 
 // A flow pair associates the amount of flow that "originates" or flows through a node
 type flowPair struct {

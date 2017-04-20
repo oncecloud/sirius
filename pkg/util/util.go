@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/coreos/ksched/pkg/types"
+	"github.com/oncecloud/sirius/pkg/types"
 )
 
 func HashBytesToEquivClass(b []byte) types.EquivClass {

@@ -17,7 +17,7 @@ package dimacs
 import (
 	"strconv"
 
-	"github.com/coreos/ksched/scheduling/flow/flowgraph"
+	"github.com/oncecloud/sirius/scheduling/flow/flowgraph"
 )
 
 // CreateArcChange implements the Change interface from dimacschange.go

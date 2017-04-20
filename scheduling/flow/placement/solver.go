@@ -22,9 +22,9 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/coreos/ksched/scheduling/flow/dimacs"
-	"github.com/coreos/ksched/scheduling/flow/flowgraph"
-	"github.com/coreos/ksched/scheduling/flow/flowmanager"
+	"github.com/oncecloud/sirius/scheduling/flow/dimacs"
+	"github.com/oncecloud/sirius/scheduling/flow/flowgraph"
+	"github.com/oncecloud/sirius/scheduling/flow/flowmanager"
 )
 
 var (

@@ -19,13 +19,13 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/coreos/ksched/pkg/types"
-	"github.com/coreos/ksched/pkg/util"
-	"github.com/coreos/ksched/pkg/util/queue"
-	pb "github.com/coreos/ksched/proto"
-	"github.com/coreos/ksched/scheduling/flow/costmodel"
-	"github.com/coreos/ksched/scheduling/flow/dimacs"
-	"github.com/coreos/ksched/scheduling/flow/flowgraph"
+	"github.com/oncecloud/sirius/pkg/types"
+	"github.com/oncecloud/sirius/pkg/util"
+	"github.com/oncecloud/sirius/pkg/util/queue"
+	pb "github.com/oncecloud/sirius/proto"
+	"github.com/oncecloud/sirius/scheduling/flow/costmodel"
+	"github.com/oncecloud/sirius/scheduling/flow/dimacs"
+	"github.com/oncecloud/sirius/scheduling/flow/flowgraph"
 )
 
 // NOTE: GraphManager uses GraphChangeManager to change the graph.

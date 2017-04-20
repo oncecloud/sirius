@@ -4,11 +4,11 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/coreos/ksched/pkg/types"
-	"github.com/coreos/ksched/pkg/util"
-	pb "github.com/coreos/ksched/proto"
-	"github.com/coreos/ksched/scheduling/flow/costmodel"
-	"github.com/coreos/ksched/scheduling/flow/dimacs"
+	"github.com/oncecloud/sirius/pkg/types"
+	"github.com/oncecloud/sirius/pkg/util"
+	pb "github.com/oncecloud/sirius/proto"
+	"github.com/oncecloud/sirius/scheduling/flow/costmodel"
+	"github.com/oncecloud/sirius/scheduling/flow/dimacs"
 )
 
 func TestAddResourceNode(t *testing.T) {

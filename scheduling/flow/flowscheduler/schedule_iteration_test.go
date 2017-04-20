@@ -6,11 +6,11 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/coreos/ksched/pkg/types"
-	"github.com/coreos/ksched/pkg/types/resourcestatus"
-	"github.com/coreos/ksched/pkg/util"
-	"github.com/coreos/ksched/pkg/util/queue"
-	pb "github.com/coreos/ksched/proto"
+	"github.com/oncecloud/sirius/pkg/types"
+	"github.com/oncecloud/sirius/pkg/types/resourcestatus"
+	"github.com/oncecloud/sirius/pkg/util"
+	"github.com/oncecloud/sirius/pkg/util/queue"
+	pb "github.com/oncecloud/sirius/proto"
 )
 
 func TestMultiScheduleIteration(t *testing.T) {

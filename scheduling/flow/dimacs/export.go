@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"io"
 
-	pb "github.com/coreos/ksched/proto"
-	"github.com/coreos/ksched/scheduling/flow/flowgraph"
+	pb "github.com/oncecloud/sirius/proto"
+	"github.com/oncecloud/sirius/scheduling/flow/flowgraph"
 )
 
 func Export(g *flowgraph.Graph, w io.Writer) {

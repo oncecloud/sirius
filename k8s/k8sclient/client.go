@@ -5,7 +5,7 @@ import (
 	"path"
 	"time"
 
-	"github.com/coreos/ksched/k8s/k8stype"
+	"github.com/oncecloud/sirius/k8s/k8stype"
 	"k8s.io/kubernetes/pkg/api"
 	"k8s.io/kubernetes/pkg/client/cache"
 	"k8s.io/kubernetes/pkg/client/restclient"
