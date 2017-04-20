@@ -7,15 +7,15 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/coreos/ksched/k8s/k8sclient"
-	"github.com/coreos/ksched/k8s/k8stype"
-	"github.com/coreos/ksched/pkg/types"
-	"github.com/coreos/ksched/pkg/types/resourcestatus"
-	"github.com/coreos/ksched/pkg/util"
-	"github.com/coreos/ksched/pkg/util/idgenerator"
-	"github.com/coreos/ksched/pkg/util/queue"
-	pb "github.com/coreos/ksched/proto"
-	"github.com/coreos/ksched/scheduling/flow/flowscheduler"
+	"github.com/oncecloud/sirius/k8s/k8sclient"
+	"github.com/oncecloud/sirius/k8s/k8stype"
+	"github.com/oncecloud/sirius/pkg/types"
+	"github.com/oncecloud/sirius/pkg/types/resourcestatus"
+	"github.com/oncecloud/sirius/pkg/util"
+	"github.com/oncecloud/sirius/pkg/util/idgenerator"
+	"github.com/oncecloud/sirius/pkg/util/queue"
+	pb "github.com/oncecloud/sirius/proto"
+	"github.com/oncecloud/sirius/scheduling/flow/flowscheduler"
 )
 
 var (

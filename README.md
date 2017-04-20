@@ -22,22 +22,22 @@ You can test the scheduler by running it inside of a container on the kubernetes
 
 On the master node pull the image.
 ```
-docker pull hasbro17/ksched:v0.6
+docker pull chenxiaoxu/sirius
 ```
 
 Run the container on the host network, waiting in background mode.
 ```
-docker run --net="host" --name="ksched" -d hasbro17/ksched:v0.6 tail -f /dev/null
+docker run --net="host" --name="sirius" -d chenxiaoxu/sirius tail -f /dev/null
 ```
 
-You will need to pause the pre-existing kubernetes scheduler's container before trying to run ksched.
+You will need to pause the pre-existing kubernetes scheduler's container before trying to run sirius.
 ```
 docker pause <container-ID>
 ```
 
-Get a shell into the ksched container.
+Get a shell into the sirius container.
 ```
-docker exec -it ksched /bin/bash
+docker exec -it sirius /bin/bash
 ```
 
 Run the init script to clone and build the scheduler.
@@ -45,7 +45,7 @@ Run the init script to clone and build the scheduler.
 /root/init.sh
 ```
 
-There should be two binaries present in the ksched project at `/root/go-workspace/src/github.com/coreos/ksched`
+There should be two binaries present in the sirius project at `/root/go-workspace/src/github.com/oncecloud/ksched`
 
 The first `k8sscheduler`, is the scheduler whose flags are specified in `cmd/k8sscheduler/scheduler.go`. Run this binary to start the scheduler.
 ```
@@ -63,11 +63,12 @@ podgen -numPods=<number-of-pods> -image=nginx
 ### Option 2: Run with Kubernetes API server:
 You can test the scheduler without the real cluster by only having the `kube-api` binary running. The setup is a little more involved for this case.
 
-You will need to have the same environment set up as is for the ksched image described by `build/Dockerfile`. Use that as a guide for your setup.
+You will need to have the same environment set up as is for the sirius image described by `build/Dockerfile`. Use that as a guide for your setup.
 
 * Setup the [Flowlessly](https://github.com/ICGog/Flowlessly) solver binary in the correct location: `/usr/local/bin/flowlessly/`.
 * Setup the Kubernetes(v1.3) source at the following location in your go workspace: `$GOPATH/src/k8s.io`
-* Get the ksched source: `go get github.com/coreos/ksched` (or from the mirror repo `github.com/hasbro17/ksched-mirror`)
+* Get the sirius source: `go get github.com/coreos/sirius` (or from the mirror repo `github.com/hasbro17/sirius-mirror`)
 * Generate the proto files by running `proto/genproto.sh` 
 
 
+Fork

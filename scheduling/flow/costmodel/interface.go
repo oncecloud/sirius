@@ -18,10 +18,10 @@
 package costmodel
 
 import (
-	"github.com/coreos/ksched/pkg/types"
-	"github.com/coreos/ksched/pkg/util"
-	pb "github.com/coreos/ksched/proto"
-	"github.com/coreos/ksched/scheduling/flow/flowgraph"
+	"github.com/oncecloud/sirius/pkg/types"
+	"github.com/oncecloud/sirius/pkg/util"
+	pb "github.com/oncecloud/sirius/proto"
+	"github.com/oncecloud/sirius/scheduling/flow/flowgraph"
 )
 
 type (

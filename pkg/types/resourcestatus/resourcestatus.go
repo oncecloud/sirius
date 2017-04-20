@@ -17,7 +17,7 @@
 
 package resourcestatus
 
-import pb "github.com/coreos/ksched/proto"
+import pb "github.com/oncecloud/sirius/proto"
 
 type ResourceStatus struct {
 	Descriptor    *pb.ResourceDescriptor

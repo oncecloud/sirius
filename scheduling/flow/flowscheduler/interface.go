@@ -17,8 +17,8 @@
 package flowscheduler
 
 import (
-	"github.com/coreos/ksched/pkg/types"
-	pb "github.com/coreos/ksched/proto"
+	"github.com/oncecloud/sirius/pkg/types"
+	pb "github.com/oncecloud/sirius/proto"
 )
 
 type Scheduler interface {

@@ -19,7 +19,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/coreos/ksched/pkg/util/queue"
+	"github.com/oncecloud/sirius/pkg/util/queue"
 )
 
 type NodeID uint64

@@ -3,8 +3,8 @@ package types
 import (
 	"sync"
 
-	rs "github.com/coreos/ksched/pkg/types/resourcestatus"
-	pb "github.com/coreos/ksched/proto"
+	rs "github.com/oncecloud/sirius/pkg/types/resourcestatus"
+	pb "github.com/oncecloud/sirius/proto"
 )
 
 type (
