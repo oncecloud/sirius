@@ -1,9 +1,3 @@
-// The Firmament project
-// Copyright (c) 2011-2012 Malte Schwarzkopf <malte.schwarzkopf@cl.cam.ac.uk>
-//
-// Reference description protobuf. This is used to serialize and pass around
-// references.
-
 syntax="proto3";
 
 package proto;
