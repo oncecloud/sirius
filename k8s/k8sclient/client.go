@@ -160,7 +160,7 @@ func (c *Client) GetPodBatch(timeout time.Duration) []*k8stype.Pod {
 
 	fmt.Printf("Batching pod scheduling requests\n")
 	numPods := 1
-	//fmt.Printf("Number of pods requests: %d", numPods)
+	// fmt.Printf("Number of pods requests: %d", numPods)
 	// Poll until done from timeout
 	// TODO: Put a cap on the batch size since this could go on forever
 	finish := false
