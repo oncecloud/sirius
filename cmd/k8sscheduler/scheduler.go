@@ -400,7 +400,7 @@ func findParentMachine(node *pb.ResourceTopologyNodeDescriptor, resourceMap *typ
 
 func PrintResourceTopology(rtnd *pb.ResourceTopologyNodeDescriptor) {
 	for _, childNode := range rtnd.Children {
-		s.dfsCleanUpResource(childNode)
+		PrintResourceTopology(childNode)
 	}
 	fmt.Println(rtnd.ResourceDesc.Uuid)
 }
