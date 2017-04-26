@@ -402,5 +402,5 @@ func (ks *k8scheduler) PrintResourceTopology(rtnd *pb.ResourceTopologyNodeDescri
 	for _, childNode := range rtnd.Children {
 		ks.PrintResourceTopology(childNode)
 	}
-	fmt.Println(ks.machineToNodeID(rtnd.ResourceDesc.Uuid))
+	fmt.Println(ks.machineToNodeID[rtnd.ResourceDesc.Uuid])
 }
