@@ -104,7 +104,7 @@ func main() {
 	} else {
 		scheduler.initResourceTopology()
 	}
-	PrintResourceTopology(scheduler.rootNode)
+	scheduler.PrintResourceTopology(scheduler.rootNode)
 	fmt.Printf("Done\n")
 
 	// Start the scheduler
@@ -398,9 +398,9 @@ func findParentMachine(node *pb.ResourceTopologyNodeDescriptor, resourceMap *typ
 	}
 }
 
-func PrintResourceTopology(rtnd *pb.ResourceTopologyNodeDescriptor) {
+func (ks *k8scheduler) PrintResourceTopology(rtnd *pb.ResourceTopologyNodeDescriptor) {
 	for _, childNode := range rtnd.Children {
-		PrintResourceTopology(childNode)
+		ks.PrintResourceTopology(childNode)
 	}
-	fmt.Println(rtnd.ResourceDesc.Uuid)
+	fmt.Println(ks.machineToNodeID(rtnd.ResourceDesc.Uuid))
 }
