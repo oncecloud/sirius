@@ -1,17 +1,3 @@
-// Copyright 2016 The ksched Authors
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 package flowmanager
 
 import (
@@ -171,7 +157,7 @@ func (gm *graphManager) AddOrUpdateJobNodes(jobs []*pb.JobDescriptor) {
 	// 1. Add/Update its unscheduled agg node
 	// 2. Add its root task to the nodeQueue
 	for _, job := range jobs {
-		//log.Printf("Graph Manager: AddOrUpdateJobNodes: job: %s\n", job.Name)
+		log.Printf("Graph Manager: AddOrUpdateJobNodes: job: %s\n", job.Name)
 		jid := util.MustJobIDFromString(job.Uuid)
 		// First add an unscheduled aggregator node for this job if none exists already.
 		unschedAggNode := gm.jobUnschedToNode[jid]
@@ -188,7 +174,7 @@ func (gm *graphManager) AddOrUpdateJobNodes(jobs []*pb.JobDescriptor) {
 		}
 
 		if taskNeedNode(rootTD) {
-			//log.Printf("AddOrUpdateJobNode: task:%v needs node\n", rootTD.Name)
+			log.Printf("AddOrUpdateJobNode: task:%v needs node\n", rootTD.Name)
 			rootTaskNode = gm.addTaskNode(jid, rootTD)
 			// Increment capacity from unsched agg node to sink.
 			gm.updateUnscheduledAggNode(unschedAggNode, 1)
@@ -1014,7 +1000,7 @@ func (gm *graphManager) updateFlowGraph(nodeQueue queue.FIFO, markedNodes map[fl
 			// We're handling a task that doesn't have an associated flow graph node.
 			gm.updateChildrenTasks(task, nodeQueue, markedNodes)
 		case node.IsTaskNode():
-			//log.Printf("Updating taskNode:%v task:%v\n", node.ID, node.Task.Name)
+			log.Printf("Updating taskNode:%v task:%v\n", node.ID, node.Task.Name)
 			gm.updateTaskNode(node, nodeQueue, markedNodes)
 			gm.updateChildrenTasks(task, nodeQueue, markedNodes)
 		case node.IsEquivalenceClassNode():
