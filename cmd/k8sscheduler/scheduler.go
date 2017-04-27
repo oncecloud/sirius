@@ -98,14 +98,14 @@ func main() {
 	scheduler := New(client, maxTasksPerPu)
 
 	// Initialize the resource topology by polling the node channel for 5 seconds
-	fmt.Printf("Initializing nodes in resource topology\n")
+	log.Printf("Initializing nodes in resource topology\n")
 	if fakeMachines {
 		scheduler.fakeResourceTopology(numMachines)
 	} else {
 		scheduler.initResourceTopology()
 	}
 	scheduler.PrintResourceTopology(scheduler.rootNode)
-	fmt.Printf("Done\n")
+	log.Printf("Done\n")
 
 	// Start the scheduler
 	scheduler.Run(client)
@@ -402,5 +402,5 @@ func (ks *k8scheduler) PrintResourceTopology(rtnd *pb.ResourceTopologyNodeDescri
 	for _, childNode := range rtnd.Children {
 		ks.PrintResourceTopology(childNode)
 	}
-	fmt.Println(ks.machineToNodeID[rtnd.ResourceDesc.Uuid])
+	log.Printf("Resource node: %v\n", ks.machineToNodeID[rtnd.ResourceDesc.Uuid])
 }
