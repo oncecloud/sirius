@@ -2,6 +2,7 @@ package k8sclient
 
 import (
 	"fmt"
+	"log"
 	"path"
 	"time"
 
@@ -158,7 +159,7 @@ func (c *Client) GetPodBatch(timeout time.Duration) []*k8stype.Pod {
 		done <- true
 	}()
 
-	fmt.Printf("Batching pod scheduling requests\n")
+	log.Printf("Batching pod scheduling requests\n")
 	numPods := 1
 	// fmt.Printf("Number of pods requests: %d", numPods)
 	// Poll until done from timeout
